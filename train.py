@@ -59,8 +59,6 @@ def main(args):
     # check arguments
     check_arguments(architecture, color_mode, loss)
 
-    print("current working directory", os.getcwd())
-
     # get autoencoder
     autoencoder = AutoEncoder(input_dir, architecture, color_mode, loss, batch_size)
 

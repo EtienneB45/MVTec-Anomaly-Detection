@@ -136,7 +136,6 @@ class AutoEncoder:
         # Training parameters
         self.early_stopping = config.EARLY_STOPPING
         self.reduce_on_plateau = config.REDUCE_ON_PLATEAU
-        print("current working directory 2", os.getcwd())
         # verbosity
         self.verbose = verbose
         if verbose:
@@ -273,6 +272,7 @@ class AutoEncoder:
 
     def create_save_dir(self):
         # create a directory to save model
+        print("current working directory 1", os.getcwd())
         now = datetime.datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
         save_dir = os.path.join(
             os.getcwd(),
@@ -283,7 +283,7 @@ class AutoEncoder:
             now,
         )
         if not os.path.isdir(save_dir):
-            print("save dir", save_dir)
+            print("make dir to", save_dir)
             os.makedirs(save_dir)
         self.save_dir = save_dir
         # create a log directory for tensorboard
