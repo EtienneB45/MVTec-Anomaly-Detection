@@ -167,7 +167,7 @@ class AutoEncoder:
         )
         return
 
-    ### Methods for training =================================================
+    # Methods for training =================================================
 
     def find_lr_opt(self, train_generator, validation_generator):
         # initialize learner object
@@ -268,7 +268,7 @@ class AutoEncoder:
         )
         return
 
-    ### Methods to create directory structure and save (and load?) model =================
+    # Methods to create directory structure and save (and load?) model =================
 
     def create_save_dir(self):
         # create a directory to save model
@@ -282,6 +282,7 @@ class AutoEncoder:
             now,
         )
         if not os.path.isdir(save_dir):
+            print(save_dir)
             os.makedirs(save_dir)
         self.save_dir = save_dir
         # create a log directory for tensorboard
@@ -320,7 +321,7 @@ class AutoEncoder:
         )
         return
 
-    ### Methods for getting finished training process info =====================
+    # Methods for getting finished training process info =====================
 
     def get_history_dict(self):
         hist_dict = dict((key, self.hist.history[key]) for key in self.hist_keys)
@@ -334,7 +335,7 @@ class AutoEncoder:
                 "nb_validation_images": self.learner.val_data.samples,
                 "validation_split": self.learner.train_data.image_data_generator._validation_split,
             },
-            "model": {"architecture": self.architecture, "loss": self.loss,},
+            "model": {"architecture": self.architecture, "loss": self.loss, },
             "preprocessing": {
                 "color_mode": self.color_mode,
                 "rescale": self.rescale,
@@ -344,7 +345,7 @@ class AutoEncoder:
                 "dynamic_range": self.dynamic_range,
                 "preprocessing": self.preprocessing,
             },
-            "lr_finder": {"lr_base": self.lr_base, "lr_opt": self.lr_opt,},
+            "lr_finder": {"lr_base": self.lr_base, "lr_opt": self.lr_opt, },
             "training": {
                 "batch_size": self.batch_size,
                 "epochs_trained": self.get_best_epoch(),
@@ -377,7 +378,7 @@ class AutoEncoder:
         total_nb = int(epochs_trained * self.learner.train_data.samples)
         return total_nb
 
-    ### Methods for plotting ============================================
+    # Methods for plotting ============================================
 
     def lr_find_plot(self, n_skip_beginning=10, n_skip_end=1, save=False):
         # get losses and learning rates
