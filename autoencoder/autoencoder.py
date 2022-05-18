@@ -158,7 +158,6 @@ class AutoEncoder:
             self.hist_keys = ("loss", "val_loss", "mssim", "val_mssim")
 
         # create directory to save model and logs
-        print("current working directory 3", os.getcwd())
         self.create_save_dir()
 
         # compile model
@@ -272,7 +271,6 @@ class AutoEncoder:
 
     def create_save_dir(self):
         # create a directory to save model
-        print("current working directory 1", os.getcwd())
         now = datetime.datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
         save_dir = os.path.join(
             os.getcwd(),
@@ -282,7 +280,8 @@ class AutoEncoder:
             self.loss,
             now,
         )
-        if not os.path.isdir(save_dir):
+        print("current working directory 1", os.getcwd())
+        if not os.path.exists(save_dir):
             print("make dir to", save_dir)
             os.makedirs(save_dir)
         self.save_dir = save_dir
