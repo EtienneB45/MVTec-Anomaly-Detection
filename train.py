@@ -59,8 +59,12 @@ def main(args):
     # check arguments
     check_arguments(architecture, color_mode, loss)
 
+    print(os.getcwd())
+
     # get autoencoder
     autoencoder = AutoEncoder(input_dir, architecture, color_mode, loss, batch_size)
+
+    print(os.getcwd())
 
     # load data as generators that yield batches of preprocessed images
     preprocessor = Preprocessor(
