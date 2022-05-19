@@ -281,6 +281,7 @@ class AutoEncoder:
             now,
         )
         print("current working directory 1", os.getcwd())
+        print("save dir before if", save_dir)
         if not os.path.exists(save_dir):
             print("make dir to", save_dir)
             os.makedirs(save_dir)
