@@ -280,8 +280,6 @@ class AutoEncoder:
             self.loss,
             now,
         )
-        print("current working directory : ", os.getcwd())
-        print("save dir before if", save_dir)
         if not os.path.isdir(save_dir):
             os.makedirs(save_dir)
         self.save_dir = save_dir
