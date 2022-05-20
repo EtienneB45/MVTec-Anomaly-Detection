@@ -272,13 +272,14 @@ class AutoEncoder:
     def create_save_dir(self):
         # create a directory to save model
         now = datetime.datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
-        save_dir = os.path.join(os.getcwd(),
-                                "saved_models",
-                                self.input_directory,
-                                self.architecture,
-                                self.loss,
-                                now,
-                                )
+        save_dir = os.path.normpath(os.path.join(
+            os.getcwd(),
+            "saved_models",
+            self.input_directory,
+            self.architecture,
+            self.loss,
+            now,
+        ))
         print("current working directory 1", os.getcwd())
         print("save dir before if", save_dir)
         if not os.path.exists(save_dir):
