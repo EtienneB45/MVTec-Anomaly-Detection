@@ -273,9 +273,9 @@ class AutoEncoder:
         # create a directory to save model
         now = datetime.datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
         save_dir = os.path.join(
-            os.path.realpath(os.getcwd()),
+            os.getcwd(),
             "saved_models",
-            self.input_directory,
+            os.path.basename(os.path.normpath((self.input_directory))),
             self.architecture,
             self.loss,
             now,
