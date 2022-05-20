@@ -187,7 +187,7 @@ class AutoEncoder:
             stop_factor=6,
             verbose=self.verbose,
             show_plot=True,
-            restore_weights_only=False,
+            restore_weights_only=True,
         )
         self.ktrain_lr_estimate()
         self.custom_lr_estimate()
