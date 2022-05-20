@@ -272,20 +272,17 @@ class AutoEncoder:
     def create_save_dir(self):
         # create a directory to save model
         now = datetime.datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
-        cwd = os.getcwd()
-        print(cwd)
         save_dir = os.path.join(
-            cwd,
+            os.path.realpath(os.getcwd()),
             "saved_models",
             self.input_directory,
             self.architecture,
             self.loss,
             now,
         )
-        print("current working directory 1", os.getcwd())
+        print("current working directory : ", os.getcwd())
         print("save dir before if", save_dir)
-        if not os.path.exists(save_dir):
-            print("make dir to", save_dir)
+        if not os.path.isdir(save_dir):
             os.makedirs(save_dir)
         self.save_dir = save_dir
         # create a log directory for tensorboard
