@@ -28,13 +28,13 @@ ktrain_lr_estimate	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detecti
 custom_lr_estimate	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def custom_lr_estimate(self):$/;"	member	line:217	class:AutoEncoder
 fit	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def fit(self, lr_opt):$/;"	member	line:241	class:AutoEncoder
 create_save_dir	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def create_save_dir(self):$/;"	member	line:272	class:AutoEncoder
-create_model_name	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def create_model_name(self):$/;"	member	line:295	class:AutoEncoder
-save	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def save(self):$/;"	member	line:302	class:AutoEncoder
-get_history_dict	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_history_dict(self):$/;"	member	line:326	class:AutoEncoder
-get_info	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_info(self):$/;"	member	line:330	class:AutoEncoder
-get_best_epoch	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_best_epoch(self):$/;"	member	line:357	class:AutoEncoder
-get_best_val_loss	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_best_val_loss(self):$/;"	member	line:367	class:AutoEncoder
-get_total_nb_training_images	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_total_nb_training_images(self):$/;"	member	line:376	class:AutoEncoder
-lr_find_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def lr_find_plot(self, n_skip_beginning=10, n_skip_end=1, save=False):$/;"	member	line:383	class:AutoEncoder
-lr_schedule_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def lr_schedule_plot(self, save=False):$/;"	member	line:443	class:AutoEncoder
-loss_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def loss_plot(self, save=False):$/;"	member	line:455	class:AutoEncoder
+create_model_name	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def create_model_name(self):$/;"	member	line:293	class:AutoEncoder
+save	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def save(self):$/;"	member	line:300	class:AutoEncoder
+get_history_dict	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_history_dict(self):$/;"	member	line:324	class:AutoEncoder
+get_info	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_info(self):$/;"	member	line:328	class:AutoEncoder
+get_best_epoch	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_best_epoch(self):$/;"	member	line:355	class:AutoEncoder
+get_best_val_loss	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_best_val_loss(self):$/;"	member	line:365	class:AutoEncoder
+get_total_nb_training_images	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def get_total_nb_training_images(self):$/;"	member	line:374	class:AutoEncoder
+lr_find_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def lr_find_plot(self, n_skip_beginning=10, n_skip_end=1, save=False):$/;"	member	line:381	class:AutoEncoder
+lr_schedule_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def lr_schedule_plot(self, save=False):$/;"	member	line:441	class:AutoEncoder
+loss_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def loss_plot(self, save=False):$/;"	member	line:453	class:AutoEncoder
