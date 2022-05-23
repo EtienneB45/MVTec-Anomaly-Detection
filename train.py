@@ -49,12 +49,17 @@ def check_arguments(architecture, color_mode, loss):
 
 def main(args):
 
+    DEFAULT_ARCHITECTURE = 'mvtecCAE'
+    DEFAULT_COLOR_MOD = 'grayscale'
+    DEFAULT_BATCH_SIZE = 8
+    DEFAULT_LOSS = 'l2'
+
     # get parsed arguments from user
-    input_dir = args.input_dir
-    architecture = args.architecture
-    color_mode = args.color
-    loss = args.loss
-    batch_size = args.batch
+    input_dir = args.get("input_dir", None)
+    architecture = args.get("architecture", DEFAULT_ARCHITECTURE)
+    color_mode = args.get("color", DEFAULT_COLOR_MOD)
+    loss = args.get("loss", DEFAULT_LOSS)
+    batch_size = args.get("batch", DEFAULT_BATCH_SIZE)
 
     # check arguments
     check_arguments(architecture, color_mode, loss)
@@ -235,7 +240,7 @@ if __name__ == "__main__":
         logger.info("No GPU was detected. CNNs can be very slow without a GPU...")
     logger.info("Tensorflow version: {} ...".format(tf.__version__))
     logger.info("Keras version: {} ...".format(keras.__version__))
-    main(args)
+    main(vars(args))
 
 # Examples of commands to initiate training with mvtec architecture
 

@@ -38,3 +38,49 @@ get_total_nb_training_images	/Users/cornissas/Documents/Thèse/Code/MVTec-Anoma
 lr_find_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def lr_find_plot(self, n_skip_beginning=10, n_skip_end=1, save=False):$/;"	member	line:381	class:AutoEncoder
 lr_schedule_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def lr_schedule_plot(self, save=False):$/;"	member	line:441	class:AutoEncoder
 loss_plot	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/autoencoder/autoencoder.py	/^    def loss_plot(self, save=False):$/;"	member	line:453	class:AutoEncoder
+os	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^import os$/;"	namespace	line:7
+argparse	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^import argparse$/;"	namespace	line:8
+tf	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^import tensorflow as tf$/;"	namespace	line:9
+keras	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^from tensorflow import keras$/;"	namespace	line:10
+AutoEncoder	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^from autoencoder.autoencoder import AutoEncoder$/;"	namespace	line:11
+Preprocessor	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^from processing.preprocessing import Preprocessor$/;"	namespace	line:12
+printProgressBar	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^from processing.utils import printProgressBar as printProgressBar$/;"	namespace	line:13
+utils	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^from processing import utils$/;"	namespace	line:14
+postprocessing	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^from processing import postprocessing$/;"	namespace	line:15
+logging	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^import logging$/;"	namespace	line:16
+logger	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^logger = logging.getLogger(__name__)$/;"	variable	line:19
+check_arguments	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^def check_arguments(architecture, color_mode, loss):$/;"	function	line:42
+main	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^def main(args):$/;"	function	line:50
+parser	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^    parser = argparse.ArgumentParser($/;"	variable	line:173
+description	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        description="Train an AutoEncoder on an image dataset.",$/;"	variable	line:174
+epilog	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        epilog="Example usage: python3 train.py -d mvtec\/capsule -a mvtec2 -b 8 -l ssim -c grayscale",$/;"	variable	line:175
+type	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        type=str,$/;"	variable	line:180
+required	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        required=True,$/;"	variable	line:181
+metavar	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        metavar="",$/;"	variable	line:182
+help	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        help="directory containing training images",$/;"	variable	line:183
+type	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        type=str,$/;"	variable	line:189
+required	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        required=False,$/;"	variable	line:190
+metavar	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        metavar="",$/;"	variable	line:191
+choices	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        choices=["mvtecCAE", "baselineCAE", "inceptionCAE", "resnetCAE", "skipCAE"],$/;"	variable	line:192
+default	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        default="mvtec2",$/;"	variable	line:193
+help	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        help="architecture of the model to use for training: 'mvtecCAE', 'baselineCAE', 'inceptionCAE', 'resnetCAE' or 'skipCAE'",$/;"	variable	line:194
+type	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        type=str,$/;"	variable	line:200
+required	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        required=False,$/;"	variable	line:201
+metavar	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        metavar="",$/;"	variable	line:202
+choices	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        choices=["rgb", "grayscale"],$/;"	variable	line:203
+default	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        default="grayscale",$/;"	variable	line:204
+help	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        help="color mode for preprocessing images before training: 'rgb' or 'grayscale'",$/;"	variable	line:205
+type	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        type=str,$/;"	variable	line:211
+required	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        required=False,$/;"	variable	line:212
+metavar	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        metavar="",$/;"	variable	line:213
+choices	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        choices=["mssim", "ssim", "l2"],$/;"	variable	line:214
+default	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        default="ssim",$/;"	variable	line:215
+help	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        help="loss function to use for training: 'mssim', 'ssim' or 'l2'",$/;"	variable	line:216
+type	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        type=int,$/;"	variable	line:222
+required	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        required=False,$/;"	variable	line:223
+metavar	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        metavar="",$/;"	variable	line:224
+default	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        default=8,$/;"	variable	line:225
+help	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        help="batch size to use for training",$/;"	variable	line:226
+action	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        action="store_true",$/;"	variable	line:232
+help	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^        help="generate inspection plots after training",$/;"	variable	line:233
+args	/Users/cornissas/Documents/Thèse/Code/MVTec-Anomaly-Detection/train.py	/^    args = parser.parse_args()$/;"	variable	line:236
