@@ -7,9 +7,9 @@ class Preprocessor:
     def __init__(
         self, input_directory, rescale, shape, color_mode, preprocessing_function,
     ):
-        self.input_directory = input_directory
-        self.train_data_dir = os.path.join(input_directory, "train")
-        self.test_data_dir = os.path.join(input_directory, "test")
+        self.input_directory = os.path.normpath(input_directory)
+        self.train_data_dir = os.path.join(self.input_directory, "train")
+        self.test_data_dir = os.path.join(self.input_directory, "test")
         self.rescale = rescale
         self.shape = shape
         self.color_mode = color_mode
